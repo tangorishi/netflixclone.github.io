@@ -1,0 +1,67 @@
+.PageNotFound {
+  position: relative;
+  img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .content {
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 5%;
+    width: 95%;
+    position: absolute;
+    @include for_tablet_portrait_up {
+      width: 80%;
+    }
+
+    h1 {
+      font-size: 1.2rem;
+      @include for_tablet_portrait_mid_up {
+        font-size: 2rem;
+      }
+
+      @include for_tablet_landscape_up {
+        font-size: 2.5rem;
+      }
+    }
+    h2,
+    h3 {
+      font-size: 1rem;
+      @include for_tablet_portrait_mid_up {
+        font-size: 1.2rem;
+      }
+      @include for_tablet_landscape_up {
+        font-size: 1.5rem;
+      }
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    button {
+      padding: 0.3rem 0.7rem;
+      border: none;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-right: 10px;
+      white-space: nowrap;
+      cursor: pointer;
+
+      @include for_tablet_portrait_mid_up {
+        padding: 0.625rem 1.25rem;
+        border-radius: 5px;
+      }
+
+      &:hover {
+        background-color: rgba(225, 225, 225, 0.9);
+      }
+    }
+  }
+}

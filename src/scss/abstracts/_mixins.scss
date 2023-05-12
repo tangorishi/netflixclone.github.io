@@ -1,0 +1,66 @@
+// buttons
+@mixin auth_btn() {
+  background: $color_red;
+  cursor: pointer;
+  border: 0;
+  color: $color_white;
+}
+
+@mixin browse_btn() {
+  padding-left: 1rem;
+  padding-right: 1.6rem;
+}
+
+// Breakpoints
+// $breakpoints: (
+//   'xs': 400px,
+//   'sm': 550px,
+//   'md': 750px,
+//   'lg': 949px,
+//   'xl': 1449px,
+//   'xl_up': 1450px,
+// );
+
+@mixin min_custom_breakpoint($bp: 0) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin max_custom_breakpoint($bp: 0) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin for_phone_only {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+@mixin for_tablet_portrait_up {
+  @media (min-width: 550px) {
+    @content;
+  }
+}
+
+@mixin for_tablet_portrait_mid_up {
+  @media (min-width: 750px) {
+    @content;
+  }
+}
+@mixin for_tablet_landscape_up {
+  @media (min-width: 950px) {
+    @content;
+  }
+}
+@mixin for_desktop_up {
+  @media (min-width: 1449px) {
+    @content;
+  }
+}
+@mixin for_big_desktop {
+  @media (min-width: 1450px) {
+    @content;
+  }
+}

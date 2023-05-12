@@ -1,0 +1,138 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  cursor: default;
+  overflow: auto;
+  height: 100%;
+
+  .modal_content {
+    position: fixed;
+    background: #181818;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    max-width: 850px;
+    border-radius: 6px;
+    overflow: auto;
+
+    @include min_custom_breakpoint(650px) {
+      width: 80%;
+      height: auto;
+    }
+
+    .modal_close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: $color-white;
+      font-size: 1.6rem;
+      z-index: 100;
+      cursor: pointer;
+    }
+
+    .modal_info {
+      padding: 0 1rem 0.7rem 1rem;
+      @include min_custom_breakpoint(650px) {
+        padding: 0 3rem 2rem 3rem;
+      }
+
+      .modal_title {
+        padding-bottom: 0.8rem;
+
+        h3 {
+          padding-bottom: 0.3rem;
+        }
+        span {
+        }
+      }
+
+      .modal_overview {
+        padding-bottom: 0.8rem;
+      }
+
+      .modal_btns {
+      }
+    }
+
+    .modal_img {
+      position: relative;
+      width: 100%;
+      height: auto;
+      border-radius: 6px 6px 0 0;
+
+      .modal_img_overlay {
+        border-radius: 6px 6px 0 0;
+        position: absolute;
+        background: -webkit-gradient(
+          linear,
+          left bottom,
+          left top,
+          from(#181818),
+          color-stop(60%, transparent)
+        );
+        background: -webkit-linear-gradient(bottom, #181818, transparent 60%);
+        background: -moz- oldlinear-gradient(bottom, #181818, transparent 60%);
+        background: -o-linear-gradient(bottom, #181818, transparent 60%);
+        background: linear-gradient(to top, #181818, transparent 60%);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      img {
+        width: auto;
+        height: 500px;
+        margin: 0 auto;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    .modal_btns {
+      display: flex;
+      align-items: center;
+
+      .like {
+        font-size: 2.5vw;
+        cursor: pointer;
+      }
+
+      button {
+        padding: 0.2rem 0.5rem;
+        border: none;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4vw;
+        font-weight: 700;
+        margin-right: 10px;
+        white-space: nowrap;
+        cursor: pointer;
+
+        @include for_tablet_portrait_mid_up {
+          padding: 0.625rem 1.25rem;
+          border-radius: 5px;
+        }
+
+        &.play {
+          background-color: white;
+          color: $background-color;
+
+          &:hover {
+            background-color: rgba(225, 225, 225, 0.9);
+          }
+        }
+      }
+    }
+  }
+}
