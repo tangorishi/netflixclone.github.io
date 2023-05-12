@@ -1,0 +1,27 @@
+@import '../scss/abstracts/variables';
+@import '../scss/abstracts/mixins';
+
+@import '../scss/base/base';
+@import '../scss/base/typography';
+
+// PAGES
+@import './pages/home';
+@import './pages/auth_forms';
+@import './pages/pageNotFound.scss';
+
+// HOME
+@import '../components/home/header/header';
+@import '../components/home/hero/hero';
+@import '../components/home/cta_form/ctaForm';
+@import '../components/home/jumbotron/jumbotron';
+@import '../components/home/accordion/accordion';
+@import '../components/home/footer/footer';
+
+// BROWSE
+@import '../components/browse/navbar/navbar';
+@import '../components/browse/featured/featured';
+@import '../components/browse/row/row';
+@import '../components/browse/card/card';
+@import '../components/browse/pending/pending';
+@import '../components/browse/favorites/favorites';
+@import '../components/browse/modal/modal';

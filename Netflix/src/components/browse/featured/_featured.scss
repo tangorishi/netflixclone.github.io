@@ -1,0 +1,177 @@
+.featured_background {
+  height: 80vh;
+  position: relative;
+  object-fit: cover;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ); /* FF3.6+ */
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0%, rgba(255, 255, 255, 0)),
+      color-stop(100%, rgba(0, 0, 0, 1))
+    ); 
+    background: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    background: -o-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ); 
+    background: -ms-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ); 
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ); 
+  }
+
+  .info {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 65%;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    @include for_tablet_portrait_up {
+      width: 50%;
+      left: 30%;
+    }
+    @include for_tablet_landscape_up {
+      width: 35%;
+      left: 22%;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .desc {
+      margin: 20px 0px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0 /45%);
+      font-size: 0.9rem;
+
+      @include for_tablet_portrait_up {
+        font-size: 1rem;
+      }
+      @include for_tablet_landscape_up {
+        font-size: 1.3rem;
+      }
+      @include for_desktop_up {
+        font-size: 2rem;
+      }
+    }
+
+    .buttons {
+      display: flex;
+
+      button {
+        padding: 0.3rem 0.7rem;
+        border: none;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-right: 10px;
+        white-space: nowrap;
+        cursor: pointer;
+        @include for_tablet_portrait_up {
+          font-size: 1rem;
+        }
+        @include for_tablet_landscape_up {
+          font-size: 1.3rem;
+        }
+        @include for_desktop_up {
+          font-size: 2rem;
+        }
+
+        @include for_tablet_portrait_mid_up {
+          padding: 0.625rem 1.25rem;
+          border-radius: 5px;
+        }
+
+        &.play {
+          background-color: white;
+          color: $background-color;
+
+          &:hover {
+            background-color: rgba(225, 225, 225, 0.9);
+          }
+        }
+
+        &.more {
+          background-color: gray;
+          color: white;
+
+          &:hover {
+            background-color: rgba(225, 225, 225, 0.4);
+          }
+        }
+
+        span {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+// @mixin for_phone_only {
+//   @media (max-width: 400px) {
+//     @content;
+//   }
+// }
+// @mixin for_tablet_portrait_up {
+//   @media (min-width: 550px) {
+//     @content;
+//   }
+// }
+
+// @mixin for_tablet_portrait_mid_up {
+//   @media (min-width: 750px) {
+//     @content;
+//   }
+// }
+// @mixin for_tablet_landscape_up {
+//   @media (min-width: 950px) {
+//     @content;
+//   }
+// }
+// @mixin for_desktop_up {
+//   @media (min-width: 1449px) {
+//     @content;
+//   }
+// }
+// @mixin for_big_desktop {
+//   @media (min-width: 1450px) {
+//     @content;
+//   }
+// }

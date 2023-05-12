@@ -1,0 +1,134 @@
+.hybrid_wrapper {
+  height: 100%;
+  .hybrid_background {
+    position: absolute;
+    background-image: url('../../../public/images/misc/home_bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+  }
+
+  .hybrid_auth_contents {
+    position: relative;
+
+    .hybrid_auth_header {
+      background-color: #000;
+      width: 100%;
+      height: 45px;
+    }
+
+    a {
+      line-height: 90px;
+    }
+    img {
+      margin-left: 3%;
+      height: 40px;
+      width: 90px;
+    }
+
+    .hybrid_auth_body {
+      background-color: #000;
+      width: 100%;
+      height: 100vh;
+      padding: 0 5%;
+
+      .hybrid_auth_content {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0 30px;
+        width: 100%;
+
+        .hybrid_auth_page_title {
+          font-size: 32px;
+          font-weight: 700;
+          margin-bottom: 28px;
+        }
+        .hybrid_form {
+          .form_input {
+            padding-bottom: 16px;
+
+            input,
+            label,
+            button {
+              width: 100%;
+            }
+
+            input {
+              background: #333;
+              border: 0;
+              -webkit-border-radius: 4px;
+              -moz-border-radius: 4px;
+              border-radius: 4px;
+              border: 0;
+              color: #fff;
+              height: 50px;
+              line-height: 50px;
+              padding: 20px 10px;
+            }
+          }
+          .hybrid_auth_button {
+            @include auth_btn;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 24px 0 12px;
+            width: 100%;
+            padding: 16px;
+          }
+        }
+
+        .hybrid_auth_social {
+          color: #737373;
+          font-size: 16px;
+          font-weight: 500;
+
+          span {
+            color: #0071eb;
+            cursor: pointer;
+          }
+        }
+        a {
+          color: $color-white;
+        }
+
+        .terms_of_use {
+          font-size: 13px;
+        }
+      }
+    }
+
+    // * 750px +
+    @include for_tablet_portrait_mid_up {
+      .hybrid_auth_header {
+        height: 90px;
+        background-color: transparent;
+
+        img {
+          height: 45px;
+          width: 167px;
+          vertical-align: middle;
+        }
+      }
+      .hybrid_auth_body {
+        background-color: rgba(0, 0, 0, 0.75);
+        max-width: 450px;
+        padding: 60px 68px 40px;
+        margin: 0 auto;
+        border-bottom: none;
+        height: auto;
+
+        .hybrid_auth_content {
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}

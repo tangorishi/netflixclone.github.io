@@ -1,0 +1,33 @@
+.list {
+  max-width: 1400px;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  margin: auto;
+
+  .list_title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+
+    @include for_tablet_portrait_up {
+      font-size: 1.25rem;
+    }
+    @include for_tablet_landscape_up {
+      font-size: 1.625rem;
+    }
+  }
+
+  .wrapper {
+    margin: 10px 0 60px 0;
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 3px;
+      @include for_tablet_landscape_up {
+        gap: 20px;
+      }
+    }
+  }
+}
