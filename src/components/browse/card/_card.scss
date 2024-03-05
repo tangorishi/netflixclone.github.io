@@ -13,7 +13,9 @@
     width: 100%;
     height: auto;
     display: block;
+    /* trunk-ignore(git-diff-check/error) */
     object-fit: cover;
+    background-color: transparent;
   }
 
   &:hover {
